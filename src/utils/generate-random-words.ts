@@ -1,0 +1,7 @@
+import { RandomWords } from "./types"
+
+const randomWords: RandomWords = ["apple", "banana", "orange", "grape", "strawberry", "blueberry", "kiwi", "pineapple", "mango", "watermelon", "peach", "pear", "apricot", "cherry", "plum", "raspberry", "blackberry", "lemon", "lime", "coconut", "avocado", "papaya", "fig", "nectarine", "melon", "cranberry", "pomegranate", "dragonfruit", "guava", "passionfruit", "peanut", "almond", "cashew", "walnut", "pecan", "pistachio", "hazelnut", "macadamia", "chestnut", "coconut", "chocolate", "vanilla", "cinnamon", "ginger", "nutmeg", "cloves", "cardamom", "saffron", "turmeric", "cumin", "basil", "oregano", "thyme", "rosemary", "parsley", "cilantro", "dill", "mint", "sage", "chives", "carrot", "potato", "tomato", "cucumber", "broccoli", "cauliflower", "spinach", "lettuce", "kale", "cabbage", "onion", "garlic", "ginger", "pepper", "jalapeno", "habanero", "chili", "zucchini", "eggplant", "radish", "celery", "asparagus", "sweet", "butternut", "pumpkin", "beet", "turnip", "rutabaga", "artichoke", "fennel", "cheese", "holiday", "brie", "mozzarella", "parmesan", "delicious", "feta", "ricotta", "camembert", "gouda"];
+
+export const generateRandomWords = (): string => {
+    return randomWords[Math.floor(Math.random() * randomWords.length)];
+}
