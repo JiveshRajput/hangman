@@ -1,7 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import { Suspense, lazy } from 'react'
 import Home from '../home'
-// import Hangman from '@/hangman'
 const Hangman = lazy(() => import('@/hangman'))
 
 

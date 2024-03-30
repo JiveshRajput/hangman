@@ -6,8 +6,6 @@ import HangmanModel from './hangman-model';
 import HeaderTitle from './header-title';
 import { checkIsMatchWon, getIncorrectWords } from '@/hangman/utils/helpers';
 
-
-
 function Hangman() {
     const [word, setWord] = useState<string>(generateRandomWords);
 
