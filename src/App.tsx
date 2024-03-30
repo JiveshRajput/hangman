@@ -1,9 +1,9 @@
-import Hangman from "@/components"
+import Navigation from "./navigation"
 
 function App() {
   return (
     <>
-      <Hangman />
+      <Navigation />
     </>
   )
 }
