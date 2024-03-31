@@ -1,5 +1,5 @@
-export const STRING = {
-    user1: '(X) Won the Game',
-    user2: '(O) Won the Game',
-    tied: 'Game Tied! Try Again!!!',
+export const STRING: { [key: string]: any } = {
+    "X": '(X) Won the Game',
+    "O": '(O) Won the Game',
+    "TIE": 'Match Tie!!!',
 }

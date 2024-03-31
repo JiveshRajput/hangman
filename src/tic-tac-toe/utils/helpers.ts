@@ -1,24 +1,25 @@
+import { wonCases } from "./config";
 import { STRING } from "./strings";
-import { ActiveUserType, GameWonStatusType } from "./types";
+import { ActiveUserType, BlockType, GameWonStatusType } from "./types";
 
 
 export function getGameStatus(status: GameWonStatusType): string {
-    if (status === undefined) {
-        return '';
-    } else {
-        return STRING[status]
-    }
+    return status === undefined ? '' : status != null ? STRING[status] : '';
 }
-
 
 export function getActiveUserName(activeUser: ActiveUserType): string {
     return `(${activeUser === "O" ? "O" : "X"}) Turn`
 }
 
-
-export function getWonCases(): number[][] {
-    return [
-        [0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6],
-        [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]
-    ]
+export function calculateWinner(squares: BlockType[]): GameWonStatusType {
+    if (!squares.includes(null)) {
+        return 'TIE';
+    }
+    for (let i = 0; i < wonCases.length; i++) {
+        const [a, b, c] = wonCases[i];
+        if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+            return squares[a];
+        }
+    }
+    return null;
 }

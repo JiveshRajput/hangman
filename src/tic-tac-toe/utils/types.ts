@@ -1,2 +1,3 @@
-export type GameWonStatusType = 'tied' | 'user1' | 'user2' | undefined
-export type ActiveUserType = 'X' | 'O' 
+export type GameWonStatusType = 'X' | 'O' | 'TIE' | undefined | null
+export type ActiveUserType = 'X' | 'O'
+export type BlockType = ("X" | "O" | null)
