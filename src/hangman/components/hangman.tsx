@@ -19,13 +19,13 @@ function Hangman() {
     }
 
     useEffect(() => {
-        if (matchWon) {
+        if (matchWon || matchLoss) {
             setTimeout(() => {
                 setWord(generateRandomWords);
                 setClickedWords([]);
             }, 2000)
         }
-    }, [matchWon])
+    }, [matchWon, matchLoss])
 
     return (
         <div className="max-w-[1140px] mx-auto p-3">

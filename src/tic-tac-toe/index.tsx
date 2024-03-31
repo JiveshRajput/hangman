@@ -1,9 +1,3 @@
-function TicTacToe() {
-    return (
-        <div>
-            TIC-TAC-TOE GAME
-        </div>
-    )
-}
+import TicTacToe from "./components/tic-tac-toe";
 
-export default TicTacToe
+export default TicTacToe;
